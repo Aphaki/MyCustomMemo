@@ -8,21 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		7F834CFB281F00C200D807FB /* MyCustomMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834CFA281F00C200D807FB /* MyCustomMemoApp.swift */; };
-		7F834CFD281F00C200D807FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834CFC281F00C200D807FB /* ContentView.swift */; };
 		7F834CFF281F00C400D807FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F834CFE281F00C400D807FB /* Assets.xcassets */; };
 		7F834D02281F00C400D807FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F834D01281F00C400D807FB /* Preview Assets.xcassets */; };
 		7F834D04281F00C400D807FB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D03281F00C400D807FB /* Persistence.swift */; };
 		7F834D07281F00C400D807FB /* MyCustomMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D05281F00C400D807FB /* MyCustomMemo.xcdatamodeld */; };
+		7F834D0E281F019000D807FB /* MainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D0D281F019000D807FB /* MainList.swift */; };
+		7F834D13281F022A00D807FB /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D12281F022A00D807FB /* Memo.swift */; };
+		7F834D15281F199E00D807FB /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D14281F199E00D807FB /* MemoStore.swift */; };
+		7F834D17281F288B00D807FB /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D16281F288B00D807FB /* MemoCell.swift */; };
+		7F834D19281F29F900D807FB /* MemoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D18281F29F900D807FB /* MemoEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F834CF7281F00C200D807FB /* MyCustomMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCustomMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F834CFA281F00C200D807FB /* MyCustomMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomMemoApp.swift; sourceTree = "<group>"; };
-		7F834CFC281F00C200D807FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F834CFE281F00C400D807FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F834D01281F00C400D807FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F834D03281F00C400D807FB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7F834D06281F00C400D807FB /* MyCustomMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCustomMemo.xcdatamodel; sourceTree = "<group>"; };
+		7F834D0D281F019000D807FB /* MainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainList.swift; sourceTree = "<group>"; };
+		7F834D12281F022A00D807FB /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		7F834D14281F199E00D807FB /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
+		7F834D16281F288B00D807FB /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		7F834D18281F29F900D807FB /* MemoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				7F834CFA281F00C200D807FB /* MyCustomMemoApp.swift */,
-				7F834CFC281F00C200D807FB /* ContentView.swift */,
 				7F834CFE281F00C400D807FB /* Assets.xcassets */,
-				7F834D03281F00C400D807FB /* Persistence.swift */,
-				7F834D05281F00C400D807FB /* MyCustomMemo.xcdatamodeld */,
+				7F834D10281F01BB00D807FB /* CoreData */,
+				7F834D11281F01C700D807FB /* Memory */,
+				7F834D0F281F019400D807FB /* View */,
 				7F834D00281F00C400D807FB /* Preview Content */,
 			);
 			path = MyCustomMemo;
@@ -71,6 +79,34 @@
 				7F834D01281F00C400D807FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F834D0F281F019400D807FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7F834D0D281F019000D807FB /* MainList.swift */,
+				7F834D18281F29F900D807FB /* MemoEdit.swift */,
+				7F834D16281F288B00D807FB /* MemoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7F834D10281F01BB00D807FB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7F834D03281F00C400D807FB /* Persistence.swift */,
+				7F834D05281F00C400D807FB /* MyCustomMemo.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7F834D11281F01C700D807FB /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				7F834D12281F022A00D807FB /* Memo.swift */,
+				7F834D14281F199E00D807FB /* MemoStore.swift */,
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F834D17281F288B00D807FB /* MemoCell.swift in Sources */,
 				7F834D07281F00C400D807FB /* MyCustomMemo.xcdatamodeld in Sources */,
+				7F834D15281F199E00D807FB /* MemoStore.swift in Sources */,
 				7F834D04281F00C400D807FB /* Persistence.swift in Sources */,
-				7F834CFD281F00C200D807FB /* ContentView.swift in Sources */,
+				7F834D0E281F019000D807FB /* MainList.swift in Sources */,
+				7F834D19281F29F900D807FB /* MemoEdit.swift in Sources */,
 				7F834CFB281F00C200D807FB /* MyCustomMemoApp.swift in Sources */,
+				7F834D13281F022A00D807FB /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
