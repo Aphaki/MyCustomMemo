@@ -13,13 +13,21 @@ struct MemoCell: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(memo.isSecret ? "🔒 비밀메모" : memo.content)
-                .font(.headline)
-                .lineLimit(1)
+            HStack {
+                Text(memo.isSecret ? "🔒 " + memo.content : memo.content)
+                    .font(.custom("DEATH-NOTE-B", size: 40))
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .lineLimit(1)
+                Spacer()
+            }
             Text(memo.insertDate, style: .date)
                 .font(.caption)
-                .foregroundColor(.secondary)
-        }
+                .foregroundColor(.white)
+                .background(.black)
+                .listRowBackground(Color.black)
+        }.background(.black)
+        
     }
 }
 

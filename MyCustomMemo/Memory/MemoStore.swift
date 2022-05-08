@@ -11,7 +11,7 @@ class MemoStore: ObservableObject {
     @Published var memoList: [Memo] = [
       Memo(content: "memo1"),
       Memo(content: "memo2"),
-      Memo(content: "memo3", isSecret: true, password: "1234")
+      Memo(content: "memo3", isSecret: true, password: "3333")
     ]
     
     
@@ -35,6 +35,16 @@ class MemoStore: ObservableObject {
     func deleteMemo(set: IndexSet) {
         for index in set {
             memoList.remove(at: index)
+        }
+    }
+    func moveMemo(from: IndexSet, to: Int) {
+        memoList.move(fromOffsets: from, toOffset: to)
+    }
+    func isCorrectPassword(password: String, inputPW: String) -> Bool {
+        if password == inputPW {
+            return true
+        } else {
+            return false
         }
     }
 }
