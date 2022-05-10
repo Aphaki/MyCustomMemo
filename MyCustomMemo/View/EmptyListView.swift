@@ -24,7 +24,7 @@ struct EmptyListView: View {
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
                     
-                    Text("Do you want to kill a people?\n Just write the name this note. \nThen nothing is happening.")
+                    Text("Do you want to kill a people?\nJust write the name this note. \nThen nothing is happening.")
                         .font(.custom("DEATH-NOTE-B", size: 30))
                         .foregroundColor(.white)
                         .padding(.bottom, 20)

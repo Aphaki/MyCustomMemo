@@ -17,10 +17,11 @@ struct MainList: View {
     
     var body: some View {
         ZStack {
-            if store.memoList.isEmpty {
-                EmptyListView()
-            } else {
+        
                 NavigationView {
+                        if store.memoList.isEmpty {
+                            EmptyListView()
+                        } else {
                     ZStack {
                         Rectangle()
                             .foregroundColor(.black)
@@ -82,10 +83,16 @@ struct MainList: View {
                             }
                         }
                         
-                    } // ZStack
+                    
                 }// NavigationView
             }
             
+            
+        }.onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.isLoading = false
+            }
+        } //onAppear
             if isLoading {
                 Rectangle()
                     .foregroundColor(.black)
@@ -102,11 +109,8 @@ struct MainList: View {
                         .padding(.bottom, 300)
                 }
             }
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.isLoading = false
-            }
-        }
+    } // ZStack
+        
     }
 }
 

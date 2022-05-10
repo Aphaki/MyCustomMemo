@@ -15,8 +15,8 @@ class Memo: Identifiable, ObservableObject {
     @Published var password: String = ""
     let insertDate: Date
     
-    init(content: String, insertDate: Date = Date.now, isSecret: Bool = false, password: String = "") {
-        id = UUID()
+    init(content: String, insertDate: Date = Date.now, isSecret: Bool = false, password: String = "", id: UUID = UUID()) {
+        self.id = id
         self.content = content
         self.insertDate = insertDate
         self.isSecret = isSecret
