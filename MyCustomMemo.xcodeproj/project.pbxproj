@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F25A2CD2829EA340097E6C4 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F25A2CC2829EA340097E6C4 /* EmptyListView.swift */; };
 		7F81571D28258C4F00965039 /* DEATH-NOTE-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F81571C28258C4F00965039 /* DEATH-NOTE-B.ttf */; };
 		7F8157202825B16300965039 /* HowToUseItView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F81571F2825B16300965039 /* HowToUseItView.swift */; };
 		7F834CFB281F00C200D807FB /* MyCustomMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834CFA281F00C200D807FB /* MyCustomMemoApp.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F25A2CC2829EA340097E6C4 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 		7F81571C28258C4F00965039 /* DEATH-NOTE-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DEATH-NOTE-B.ttf"; sourceTree = "<group>"; };
 		7F81571E28258CCC00965039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F81571F2825B16300965039 /* HowToUseItView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUseItView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7F81571F2825B16300965039 /* HowToUseItView.swift */,
 				7F834D16281F288B00D807FB /* MemoCell.swift */,
 				7FADFB8A281FB6BC00436F87 /* MemoRead.swift */,
+				7F25A2CC2829EA340097E6C4 /* EmptyListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				7FADFB8B281FB6BC00436F87 /* MemoRead.swift in Sources */,
 				7F834D15281F199E00D807FB /* MemoStore.swift in Sources */,
 				7F834D04281F00C400D807FB /* Persistence.swift in Sources */,
+				7F25A2CD2829EA340097E6C4 /* EmptyListView.swift in Sources */,
 				7F834D0E281F019000D807FB /* MainList.swift in Sources */,
 				7F834D19281F29F900D807FB /* MemoEdit.swift in Sources */,
 				7F8157202825B16300965039 /* HowToUseItView.swift in Sources */,

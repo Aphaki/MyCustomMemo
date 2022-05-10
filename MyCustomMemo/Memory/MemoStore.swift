@@ -27,11 +27,6 @@ class MemoStore: ObservableObject {
         memo.isSecret = isSecret
         memo.password = password
     }
-    func deleteMemo(memo: Memo) {
-        memoList.removeAll {
-            $0.id == memo.id
-        }
-    }
     func deleteMemo(set: IndexSet) {
         for index in set {
             memoList.remove(at: index)
@@ -39,12 +34,5 @@ class MemoStore: ObservableObject {
     }
     func moveMemo(from: IndexSet, to: Int) {
         memoList.move(fromOffsets: from, toOffset: to)
-    }
-    func isCorrectPassword(password: String, inputPW: String) -> Bool {
-        if password == inputPW {
-            return true
-        } else {
-            return false
-        }
     }
 }

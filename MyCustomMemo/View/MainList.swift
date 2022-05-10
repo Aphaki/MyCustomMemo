@@ -17,70 +17,75 @@ struct MainList: View {
     
     var body: some View {
         ZStack {
-            NavigationView {
-                ZStack {
-                    Rectangle()
-                        .foregroundColor(.black)
-                        .ignoresSafeArea()
-                    
-                    VStack {
-                        Text("Death Note")
-                            .font(.custom("DEATH-NOTE-B", size: 60, relativeTo: .largeTitle))
-                            .foregroundColor(.white)
-                        Button {
-                            showHowToUseView = true
-                        } label: {
-                            Text("How to use it")
-                                .foregroundColor(.red)
-                                .font(.custom("DEATH-NOTE-B", size: 40, relativeTo: .title2))
-                        }
-                        List {
-                            ForEach(store.memoList) { memo in
-                                NavigationLink {
-                                    MemoRead(memo: memo)
-                                } label: {
-                                    MemoCell(memo: memo)
-                                }
-                            }
-                            .onMove { indexSet, int in
-                                store.moveMemo(from: indexSet, to: int)
-                            }
-                            .onDelete { indexSet in
-                                store.deleteMemo(set: indexSet)
-                            }
-                            .listRowBackground(Color.black)
-                            .listRowSeparatorTint(.white)
-                        }
-                        .listStyle(.plain)
-                        .navigationTitle(Text(""))
-                        .navigationBarTitleDisplayMode(.inline)
+            if store.memoList.isEmpty {
+                EmptyListView()
+            } else {
+                NavigationView {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.black)
+                            .ignoresSafeArea()
                         
-                        .toolbar {
-                            ToolbarItemGroup(placement: .navigationBarLeading) {
-                                EditButton()
-                                    .font(.custom("DEATH-NOTE-B", size: 40))
-                                    .foregroundColor(.white)
+                        VStack {
+                            Text("Death Note")
+                                .font(.custom("DEATH-NOTE-B", size: 60, relativeTo: .largeTitle))
+                                .foregroundColor(.white)
+                            Button {
+                                showHowToUseView = true
+                            } label: {
+                                Text("How to use it")
+                                    .foregroundColor(.red)
+                                    .font(.custom("DEATH-NOTE-B", size: 40, relativeTo: .title2))
                             }
-                            ToolbarItemGroup(placement: .navigationBarTrailing) {
-                                Button {
-                                    showEditView = true
-                                } label: {
-                                    Image(systemName: "square.and.pencil")
-                                        .font(.title2)
-                                        .foregroundColor(.white)
-                                        .padding()
+                            List {
+                                ForEach(store.memoList) { memo in
+                                    NavigationLink {
+                                        MemoRead(memo: memo)
+                                    } label: {
+                                        MemoCell(memo: memo)
+                                    }
                                 }
+                                .onMove { indexSet, int in
+                                    store.moveMemo(from: indexSet, to: int)
+                                }
+                                .onDelete { indexSet in
+                                    store.deleteMemo(set: indexSet)
+                                }
+                                .listRowBackground(Color.black)
+                                .listRowSeparatorTint(.white)
                             }
-                        }.sheet(isPresented: $showEditView) {
-                            MemoEdit()
+                            .listStyle(.plain)
+                            .navigationTitle(Text(""))
+                            .navigationBarTitleDisplayMode(.inline)
+                            
+                            .toolbar {
+                                ToolbarItemGroup(placement: .navigationBarLeading) {
+                                    EditButton()
+                                        .font(.custom("DEATH-NOTE-B", size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                                    Button {
+                                        showEditView = true
+                                    } label: {
+                                        Image(systemName: "square.and.pencil")
+                                            .font(.title2)
+                                            .foregroundColor(.white)
+                                            .padding()
+                                    }
+                                }
+                            }.sheet(isPresented: $showEditView) {
+                                MemoEdit()
+                            }
+                            .sheet(isPresented: $showHowToUseView) {
+                                HowToUseItView()
+                            }
                         }
-                        .sheet(isPresented: $showHowToUseView) {
-                            HowToUseItView()
-                        }
-                    }
-                    
-                } // ZStack
-            }// NavigationView
+                        
+                    } // ZStack
+                }// NavigationView
+            }
+            
             if isLoading {
                 Rectangle()
                     .foregroundColor(.black)
@@ -102,9 +107,6 @@ struct MainList: View {
                 self.isLoading = false
             }
         }
-        
-        
-        
     }
 }
 
