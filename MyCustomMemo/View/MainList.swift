@@ -17,16 +17,14 @@ struct MainList: View {
     
     var body: some View {
         ZStack {
-        
-                NavigationView {
-                        if store.memoList.isEmpty {
-                            EmptyListView()
-                        } else {
+            NavigationView {
+                if store.memoList.isEmpty {
+                    EmptyListView()
+                } else {
                     ZStack {
                         Rectangle()
                             .foregroundColor(.black)
                             .ignoresSafeArea()
-                        
                         VStack {
                             Text("Death Note")
                                 .font(.custom("DEATH-NOTE-B", size: 60, relativeTo: .largeTitle))
@@ -82,17 +80,15 @@ struct MainList: View {
                                 HowToUseItView()
                             }
                         }
-                        
+                    }// ZStack
                     
-                }// NavigationView
-            }
-            
-            
-        }.onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.isLoading = false
-            }
-        } //onAppear
+                }
+            } //NavigationView
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.isLoading = false
+                }
+            } //onAppear
             if isLoading {
                 Rectangle()
                     .foregroundColor(.black)
@@ -101,7 +97,7 @@ struct MainList: View {
                     Text("DEATH  NOTE")
                         .font(.custom("DEATH-NOTE-B", size: 60))
                         .padding(.top, 150)
-                    .foregroundColor(.white)
+                        .foregroundColor(.white)
                     Spacer()
                     ProgressView()
                         .scaleEffect(1.5)
@@ -109,7 +105,7 @@ struct MainList: View {
                         .padding(.bottom, 300)
                 }
             }
-    } // ZStack
+        } // ZStack
         
     }
 }
