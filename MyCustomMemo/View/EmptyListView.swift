@@ -10,6 +10,7 @@ import SwiftUI
 struct EmptyListView: View {
     @State var animate: Bool = false
     @State var showHowToUseView = false
+    @State var showNewMemo = false
     
     var body: some View {
         ZStack {
@@ -26,11 +27,12 @@ struct EmptyListView: View {
                     
                     Text("Do you want to kill a people?\nJust write the name this note. \nThen nothing is happening.")
                         .font(.custom("DEATH-NOTE-B", size: 30))
+                        .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                         .padding(.bottom, 20)
                     
-                    NavigationLink(
-                        destination: MemoEdit(),
+                    Button(
+                        action: { showNewMemo = true },
                         label: {
                             Text("✒️Add the name")
                                 .font(.custom("DEATH-NOTE-B", size: 30))
@@ -41,6 +43,9 @@ struct EmptyListView: View {
                                 .background(animate ? .secondary : Color.red)
                                 .cornerRadius(10)
                         })
+                    .sheet(isPresented: $showNewMemo, content: {
+                        MemoEdit()
+                    })
                     .padding(.horizontal, animate ? 30 : 50)
                     .shadow(
                         color: animate ? .secondary.opacity(0.7) : Color.red.opacity(0.7),
@@ -63,7 +68,6 @@ struct EmptyListView: View {
 
                 }
                 .frame(maxWidth: 400)
-                .multilineTextAlignment(.center)
                 .padding(40)
                 .onAppear(perform: addAnimation)
             }
