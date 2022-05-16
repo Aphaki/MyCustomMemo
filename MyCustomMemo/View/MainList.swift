@@ -82,7 +82,7 @@ struct MainList: View {
                         }
                     }// ZStack
                     
-                }
+                } // Memo List View
             } //NavigationView
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

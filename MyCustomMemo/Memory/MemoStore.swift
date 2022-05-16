@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreData
 
 class MemoStore: ObservableObject {
     @Published var memoList: [Memo] = [] {
@@ -45,6 +44,7 @@ class MemoStore: ObservableObject {
 
     }
     
+    //MARK: - UserDefaults Method
     func saveMemo() {
         if let encodedData = try? JSONEncoder().encode(memoList) {
             UserDefaults.standard.set(encodedData, forKey: memoListKey)

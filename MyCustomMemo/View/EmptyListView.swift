@@ -20,10 +20,11 @@ struct EmptyListView: View {
                 .offset(y: 16)
             ScrollView {
                 VStack(spacing: 10) {
-                    Text("There are no names!")
-                        .font(.custom("DEATH-NOTE-B", size: 60))
+                    Text("There are no names")
+                        .font(.custom("DEATH-NOTE-B", size: 50))
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
+                        .padding(.bottom, 20)
                     
                     Text("Do you want to kill a people?\nJust write the name this note. \nThen nothing is happening.")
                         .font(.custom("DEATH-NOTE-B", size: 30))
