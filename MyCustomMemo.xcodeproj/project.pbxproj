@@ -19,6 +19,7 @@
 		7F834D17281F288B00D807FB /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D16281F288B00D807FB /* MemoCell.swift */; };
 		7F834D19281F29F900D807FB /* MemoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F834D18281F29F900D807FB /* MemoEdit.swift */; };
 		7FADFB8B281FB6BC00436F87 /* MemoRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FADFB8A281FB6BC00436F87 /* MemoRead.swift */; };
+		7FEA23A7286488F3001B0117 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEA23A6286488F3001B0117 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		7F834D16281F288B00D807FB /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		7F834D18281F29F900D807FB /* MemoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoEdit.swift; sourceTree = "<group>"; };
 		7FADFB8A281FB6BC00436F87 /* MemoRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRead.swift; sourceTree = "<group>"; };
+		7FEA23A6286488F3001B0117 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				7F81571E28258CCC00965039 /* Info.plist */,
 				7F834CFA281F00C200D807FB /* MyCustomMemoApp.swift */,
+				7FEA23A6286488F3001B0117 /* Color.swift */,
 				7F834CFE281F00C400D807FB /* Assets.xcassets */,
 				7F834D11281F01C700D807FB /* Memory */,
 				7F834D0F281F019400D807FB /* View */,
@@ -191,6 +194,7 @@
 				7F834D17281F288B00D807FB /* MemoCell.swift in Sources */,
 				7FADFB8B281FB6BC00436F87 /* MemoRead.swift in Sources */,
 				7F834D15281F199E00D807FB /* MemoStore.swift in Sources */,
+				7FEA23A7286488F3001B0117 /* Color.swift in Sources */,
 				7F25A2CD2829EA340097E6C4 /* EmptyListView.swift in Sources */,
 				7F834D0E281F019000D807FB /* MainList.swift in Sources */,
 				7F834D19281F29F900D807FB /* MemoEdit.swift in Sources */,
@@ -329,6 +333,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCustomMemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DEATH NOTE(MEMO)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -359,6 +364,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyCustomMemo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DEATH NOTE(MEMO)";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

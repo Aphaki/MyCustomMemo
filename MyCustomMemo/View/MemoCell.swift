@@ -15,7 +15,7 @@ struct MemoCell: View {
         VStack(alignment: .leading) {
             HStack {
                 Text(memo.isSecret ? "🔒 " + memo.content : memo.content)
-                    .font(.custom("DEATH-NOTE-B", size: 40))
+                    .font(.custom("DEATH-NOTE-B", size: 30))
                     .foregroundColor(.white)
                     .background(.black)
                     .lineLimit(1)

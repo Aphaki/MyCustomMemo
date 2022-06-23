@@ -40,7 +40,7 @@ struct MemoRead: View {
                 }
                 Spacer()
             } // VStack
-            .navigationTitle("📝")
+            .navigationTitle("Write the name")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
@@ -64,7 +64,7 @@ struct MemoRead: View {
                     Text("🔒")
                         .font(.system(size: 200))
                         .padding()
-                    TextField("Password", text: $unLockPassword)
+                    SecureField("Password", text: $unLockPassword)
                         .font(.custom("DEATH-NOTE-B", size: 40))
                         .padding(10)
                         .background()

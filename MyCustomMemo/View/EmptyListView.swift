@@ -14,7 +14,7 @@ struct EmptyListView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
+            Color.black
                 .ignoresSafeArea()
             Image("Ryuk")
                 .offset(y: 16)
@@ -35,7 +35,7 @@ struct EmptyListView: View {
                     Button(
                         action: { showNewMemo = true },
                         label: {
-                            Text("✒️Add the name")
+                            Text("Click and write the name")
                                 .font(.custom("DEATH-NOTE-B", size: 30))
                                 .foregroundColor(.white)
                                 .font(.headline)
