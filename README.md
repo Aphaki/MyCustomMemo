@@ -13,8 +13,6 @@
 ![DeathNotePreview](https://user-images.githubusercontent.com/90740892/175364382-7796adf4-5b30-4571-a206-0e2686e48378.gif)
 
 
-- 아이콘 이미지![appstore](https://user-images.githubusercontent.com/90740892/178170908-9f2a180b-2203-4960-b641-8c393a5efd44.png)
-
 
 - 데이터는 UserDefault 를 사용하여 메모의 배열을 Encoding 해서 보관하는 방식
 
